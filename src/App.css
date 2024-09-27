@@ -1,0 +1,137 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.table-fixed-left th:first-child,
+.table-fixed-left td:first-child {
+  position: sticky;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+  width: 300px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  max-width: calc(100vw - 40px);
+}
+
+.draggable {
+  cursor: move;
+}
+
+.variant-cell {
+  width: 200px;
+  height: 100px;
+  background-color: #f1f3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-design-btn {
+  border: 2px dashed #ced4da;
+  background-color: transparent;
+  color: #6c757d;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  font-weight: normal;
+}
+
+.filter-number {
+  width: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.filter-number:hover .delete-state {
+  display: inline-block;
+}
+
+.delete-state {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.filter-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-name {
+  font-weight: bold;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.tag {
+  background-color: #e9ecef;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.add-state-cell {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drag-over {
+  border-top: 2px solid #007bff;
+}
+
+.dotted-line {
+  border-left: 1px dotted #ced4da;
+  height: 100%;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.image-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.insert-btn {
+  display: none;
+}
+
+.image-item:hover .insert-btn {
+  display: block;
+}
+
+.logo {
+  max-width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
